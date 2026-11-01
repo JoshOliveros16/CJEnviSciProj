@@ -118,7 +118,12 @@ app.post("/api/reports", rateLimit, (req, res) => {
 });
 
 /* ---------- routes ---------- */
-app.get("/references", (req, res) => res.redirect("/#references"));
+app.get("/references", (req, res) => res.redirect("/references.html"));
+app.get("/about", (req, res) => res.redirect("/about.html"));
+app.get("/explore", (req, res) => res.redirect("/explore.html"));
+app.get("/solutions", (req, res) => res.redirect("/solutions.html"));
+app.get("/community", (req, res) => res.redirect("/community.html"));
+app.get("/causes-effects", (req, res) => res.redirect("/causes-effects.html"));
 
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "public", "404.html"), (err) => {

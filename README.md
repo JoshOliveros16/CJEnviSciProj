@@ -3,7 +3,7 @@
 **A Web-Based Environmental Awareness Platform on Land Subsidence in Hagonoy, Bulacan**
 BSIT 4A · Final Course Output in Environmental Science
 
-A Node.js (Express) website with an "going deeper into the earth" scroll theme.
+A Node.js (Express) website. The landing page is an infographic that goes deeper into the earth as you scroll, and the other pages open from the side menu.
 
 ## How to run (VS Code terminal)
 
@@ -28,13 +28,21 @@ hagonoy-groundwatch/
 ├── package.json
 ├── data/                  community reports are saved here (reports.json)
 └── public/
-    ├── index.html         the whole website (all sections)
+    ├── index.html             landing page (infographic, scroll down through the soil layers)
+    ├── about.html             About land subsidence
+    ├── causes-effects.html    Causes and effects (with the road simulator)
+    ├── community.html         Community impact
+    ├── solutions.html         Mitigation and solutions
+    ├── explore.html           Map, quiz, FAQ and report form
+    ├── references.html        All references (opened from the footer)
     ├── 404.html
-    ├── favicon.svg
-    ├── css/style.css      theme, layout, animations
+    ├── css/style.css          theme, layout, animations
     └── js/
-        ├── config.js      EDIT THIS: group members, Google Form link
-        └── main.js        depth meter, simulator, map, quiz, form, tabs
+        ├── config.js          EDIT THIS: group members, Google Form link
+        ├── layout.js          side menu, footer, icons, scroll animations
+        ├── home.js            landing page depth meter
+        ├── effects.js         road simulator
+        └── explore.js         map, quiz, report form
 ```
 
 ## Easy edits
@@ -42,8 +50,8 @@ hagonoy-groundwatch/
 - **Group members / section:** `public/js/config.js`
 - **Google Form instead of (or beside) the built-in form:** paste the embed link in `googleFormUrl` inside `config.js`.
 - **Colors:** CSS variables at the top of `public/css/style.css`.
-- **Quiz questions:** `QUIZ` array in `public/js/main.js`.
-- **Map areas:** `AREAS` array in `public/js/main.js`.
+- **Quiz questions:** `QUIZ` array in `public/js/explore.js`.
+- **Map areas:** `AREAS` array in `public/js/explore.js`.
 
 ## Deploying to Vercel
 
@@ -56,8 +64,7 @@ hagonoy-groundwatch/
 - Photos and the Google Map load from the internet (Wikimedia Commons and Google Maps), so connect to the internet when presenting. If a photo can't load, a neat placeholder is shown instead.
 - Fonts (Fraunces, Nunito Sans) come from Google Fonts; system fonts are used if offline.
 - If you open `index.html` directly (without the server), everything works except saving reports to `data/reports.json`. The form then keeps a copy in the browser instead.
-- Check that all references and dates are correct before submitting, and cite Wikimedia photos as listed in the References section.
 
 ## Required sections (per the course output)
 
-Home · About Land Subsidence · Causes and Effects · Community Impact · Mitigation and Solutions · Interactive features (Map, Quiz, FAQ, Report form, Sinking simulator) · References (APA 7th)
+Home · About Land Subsidence · Causes and Effects · Community Impact · Mitigation and Solutions · Interactive features (Map, Quiz, FAQ, Report form, Road simulator) · References (APA 7th)

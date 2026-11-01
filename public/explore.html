@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore and Take Part | Hagonoy GroundWatch</title>
+  <meta name="description" content="Interactive map of flood-reported barangays in Hagonoy, a land subsidence quiz, FAQ and a community report form.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body id="top">
+  <div id="gw-rail"></div>
+  <div class="content">
+  <header class="banner b-explore">
+    <span class="deco d1" aria-hidden="true"></span><span class="deco d2" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="crumbs" data-anim="up"><a href="/">Home</a><span>/</span><span>Explore</span></div>
+      <h1 data-anim="up" style="--i:1">Explore and take part</h1>
+      <p data-anim="up" style="--i:2">Check which barangays have reported flooding, test what you have learned, read common questions and send your own observations.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="block t-page" id="tools">
+      <div class="wrap">
+        <div class="tabs" role="tablist" aria-label="Interactive features" data-anim="up">
+          <button class="tab" role="tab" id="tab-map" aria-controls="panel-map" aria-selected="true"><i data-ico="pin"></i> Map</button>
+          <button class="tab" role="tab" id="tab-quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1"><i data-ico="help"></i> Quiz</button>
+          <button class="tab" role="tab" id="tab-faq" aria-controls="panel-faq" aria-selected="false" tabindex="-1"><i data-ico="chat"></i> FAQ</button>
+          <button class="tab" role="tab" id="tab-report" aria-controls="panel-report" aria-selected="false" tabindex="-1"><i data-ico="pencil"></i> Report</button>
+        </div>
+
+        <!-- MAP -->
+        <div class="panel" role="tabpanel" id="panel-map" aria-labelledby="tab-map">
+          <div class="map-grid">
+            <div>
+              <div class="map-frame"><iframe id="mapFrame" title="Google Map of Hagonoy, Bulacan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hagonoy,+Bulacan&amp;z=13&amp;output=embed"></iframe></div>
+              <p class="note" style="margin-top:.8rem"><a id="mapOpen" href="https://www.google.com/maps?q=Hagonoy,+Bulacan" target="_blank" rel="noopener" style="color:var(--accent);font-weight:800">Open in Google Maps</a> (needs an internet connection)</p>
+            </div>
+            <div class="card still">
+              <h3>Flood-reported areas</h3>
+              <p class="note">Tap a barangay to move the map to it. These are areas named in news reports of flooding. It is not an official hazard or subsidence map. For official maps, ask your MDRRMO.</p>
+              <div class="chips" id="mapChips"></div>
+              <div id="mapInfo" class="card pebble still" style="background:var(--chip);box-shadow:none" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="panel" role="tabpanel" id="panel-quiz" aria-labelledby="tab-quiz" hidden>
+          <div class="quiz card still" id="quizBox"></div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="panel" role="tabpanel" id="panel-faq" aria-labelledby="tab-faq" hidden>
+          <div class="faq">
+            <details open><summary>Is land subsidence the same as sea-level rise?</summary><div class="ans"><p>No. Sea-level rise is the water getting higher. Subsidence is the land getting lower. In Hagonoy both happen, and the combined effect is called relative sea-level rise. For a low coastal town, a sinking land surface can matter as much as the sea itself.</p></div></details>
+            <details><summary>Can subsidence be stopped or reversed?</summary><div class="ans"><p>It can be slowed by limiting groundwater pumping and managing land use. Geologist Mahar Lagmay has said it could be reversible with effective policies on well digging. In general, compacted clay does not fully spring back, so prevention matters most.</p></div></details>
+            <details><summary>Is rain the only reason Hagonoy floods?</summary><div class="ans"><p>No. Rain, typhoons and monsoon winds trigger floods, but high tides, river overflow, silted channels, drainage problems and sinking land all add up. Subsidence does not create rainfall. It makes floodwater deeper and slower to drain.</p></div></details>
+            <details><summary>Is it legal to drill my own deep well?</summary><div class="ans"><p>Under the Water Code of the Philippines (Presidential Decree No. 1067), groundwater use generally requires a permit from the National Water Resources Board (NWRB). If you suspect an unregistered deep well, tell your barangay or LGU.</p></div></details>
+            <details><summary>How do I know if my barangay is affected?</summary><div class="ans"><p>Ask your barangay officials or the Municipal Disaster Risk Reduction and Management Office (MDRRMO), and check official hazard maps from government agencies. The map tab here only shows areas named in news reports.</p></div></details>
+            <details><summary>What can a student or resident do right now?</summary><div class="ans"><p>Save water, keep drains clear, learn your evacuation route, report observations through the form here and share what you learn with family and neighbors.</p></div></details>
+            <details><summary>Why does a community report form matter?</summary><div class="ans"><p>Satellite data shows how fast land moves, but only residents know where water enters homes first, where roads crack and which wells are running. Local observations can guide where officials look next.</p></div></details>
+          </div>
+        </div>
+
+        <!-- REPORT -->
+        <div class="panel" role="tabpanel" id="panel-report" aria-labelledby="tab-report" hidden>
+          <div class="split top">
+            <div>
+              <h2>Community feedback and reporting</h2>
+              <p>Saw flooding, cracks, a sinking road or a suspicious deep well? Tell us. This is a school project prototype and not an official government channel.</p>
+              <div class="tip" data-mascot="bob"><p><strong>Tip:</strong> Mention the street or sitio, how deep the water was and the date. Please do not include private information about other people.</p></div>
+              <div id="gformBox" style="margin-top:1.4rem" hidden></div>
+            </div>
+            <div class="card still">
+              <form id="reportForm" novalidate>
+                <div class="form-grid">
+                  <div class="field"><label for="rName">Name <small>(optional)</small></label><input id="rName" name="name" type="text" maxlength="80" autocomplete="name" placeholder="Juan Dela Cruz"></div>
+                  <div class="field"><label for="rContact">Email or phone <small>(optional)</small></label><input id="rContact" name="contact" type="text" maxlength="120" autocomplete="email" placeholder="So we can follow up"></div>
+                  <div class="field"><label for="rBrgy">Barangay *</label>
+                    <select id="rBrgy" name="barangay" required><option value="">Choose barangay</option></select>
+                    <span class="err">Please choose a barangay.</span></div>
+                  <div class="field"><label for="rType">What did you observe? *</label>
+                    <select id="rType" name="type" required>
+                      <option value="">Choose a type</option>
+                      <option>Flooding</option><option>Cracks / damaged structures</option><option>Sinking ground or road</option><option>Unregulated deep well</option><option>Saltwater / brackish water</option><option>Other</option>
+                    </select><span class="err">Please choose a type.</span></div>
+                  <div class="field full"><label for="rDate">Date observed</label><input id="rDate" name="dateObserved" type="date"></div>
+                  <div class="field full"><label for="rDesc">Describe what you saw *</label>
+                    <textarea id="rDesc" name="description" maxlength="1200" required placeholder="Example: Water was knee-deep along the main road near the chapel for 3 days after the high tide."></textarea>
+                    <div class="count"><span id="rCount">0</span> / 1200</div>
+                    <span class="err">Please write at least 10 characters.</span></div>
+                  <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                  <div class="field full"><label class="check"><input type="checkbox" id="rOk" required> <span>I understand this is a school project and my report may be used for learning and awareness.</span></label><span class="err">Please tick the box to continue.</span></div>
+                  <div class="full"><button type="submit" class="btn btn-primary" id="rSubmit">Send report</button> <span id="rStatus" class="note" role="status" style="margin-left:.6rem"></span></div>
+                </div>
+              </form>
+              <div class="success" id="rDone" hidden>
+                <div class="mascot" data-mascot="bob"></div>
+                <h3>Thank you!</h3>
+                <p>Your report was received. Reference: <code id="rId">GW-XXXXXX</code></p>
+                <button type="button" class="btn btn-ghost" id="rAgain">Send another report</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block alt t-page">
+      <div class="wrap">
+        <div class="next" data-stagger="up">
+          <a href="/solutions.html"><small>Back</small><b>Solutions <span><i data-ico="arrow"></i></span></b></a>
+          <a href="/references.html"><small>Sources</small><b>References <span><i data-ico="arrow"></i></span></b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="gw-foot"></div>
+  </div>
+  <script src="/js/config.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/explore.js"></script>
+</body>
+</html>
