@@ -37,7 +37,8 @@
     down: '<path d="M12 4v15M6 13l6 6 6-6"/>',
     menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
     close: '<path d="M6 6l12 12M18 6L6 18"/>',
-    quote: '<path d="M8 8H5v5h3v3H4M18 8h-3v5h3v3h-4"/>'
+    quote: '<path d="M8 8H5v5h3v3H4M18 8h-3v5h3v3h-4"/>',
+    chev: '<path d="M15 6l-6 6 6 6"/>'
   };
   var ART =
     '<symbol id="a-pebble" viewBox="0 0 40 30"><ellipse cx="20" cy="16" rx="18" ry="12" fill="currentColor"/><ellipse cx="14" cy="11" rx="8" ry="4" fill="#fff" opacity=".28"/></symbol>' +
@@ -82,7 +83,6 @@
     '<nav class="rail" id="rail" aria-label="Pages">' +
     '<a class="rail-brand" href="/" aria-label="Hagonoy GroundWatch home">' + logo + "<b>GroundWatch</b></a>" +
     '<ul class="rail-links">' + links + "</ul>" +
-    '<div class="rail-depth" aria-hidden="true"><span class="num" id="depthNum">0 m</span><span class="name lbl" id="depthName">Surface</span><div class="gauge"><i id="depthBar"></i></div></div>' +
     "</nav>" +
     '<button class="fab" id="fab" aria-label="Open menu" aria-expanded="false" aria-controls="rail">' + ico("menu") + "</button>" +
     '<div class="scrim" id="scrim"></div>';
