@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hagonoy GroundWatch — Land Subsidence in Hagonoy, Bulacan</title>
+  <meta name="description" content="Hagonoy GroundWatch: a community-based environmental awareness website about land subsidence in Hagonoy, Bulacan — causes, effects, map, quiz, solutions and a community reporting form.">
+  <meta name="theme-color" content="#2f3d20">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- shared SVG: Pebbo the pebble mascot -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="pebbo" viewBox="0 0 100 90">
+      <ellipse cx="50" cy="55" rx="40" ry="31" fill="#a9ad98"/>
+      <ellipse cx="42" cy="42" rx="22" ry="11" fill="#d3d6c3" opacity=".65"/>
+      <path d="M50 25C47 11 58 6 67 11 63 20 58 25 50 25Z" fill="#758956"/>
+      <path d="M50 25C50 18 53 14 58 11" stroke="#4f6238" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="36" cy="55" r="5" fill="#2a2418"/><circle cx="64" cy="55" r="5" fill="#2a2418"/>
+      <circle cx="37.6" cy="53.4" r="1.8" fill="#fff"/><circle cx="65.6" cy="53.4" r="1.8" fill="#fff"/>
+      <path d="M43 66Q50 73 57 66" stroke="#2a2418" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse cx="27" cy="65" rx="6" ry="3.4" fill="#e8a79a" opacity=".75"/><ellipse cx="73" cy="65" rx="6" ry="3.4" fill="#e8a79a" opacity=".75"/>
+    </symbol>
+  </svg>
+
+  <header class="hdr" id="hdr">
+    <a class="brand" href="#home" aria-label="Hagonoy GroundWatch, back to top">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#2f3d20"/><ellipse cx="32" cy="38" rx="20" ry="16" fill="#a9ad98"/><path d="M32 22c-2-9 6-12 13-9-3 7-7 9-13 9z" fill="#9bb06e"/><circle cx="24" cy="37" r="3" fill="#2a2418"/><circle cx="40" cy="37" r="3" fill="#2a2418"/><path d="M27 45q5 4 10 0" stroke="#2a2418" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      <span>GroundWatch</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#causes">Causes</a>
+      <a href="#effects">Effects</a>
+      <a href="#community">Community</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#explore">Explore</a>
+      <a href="#references">References</a>
+    </nav>
+    <span class="depth" aria-live="off" title="Just for fun: how deep you've scrolled"><span aria-hidden="true">⬇</span> <b id="depthNum">0 m</b> <span class="lbl" id="depthLbl">Surface</span></span>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+    <div class="bar" aria-hidden="true"><i id="progress"></i></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HOME ===================== -->
+    <section class="layer hero t-light" id="home" data-layer="Surface">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow reveal">BSIT 4A · Environmental Science Final Output</span>
+            <h1 class="reveal" style="--d:.05s">Hagonoy GroundWatch<em>The ground beneath us is sinking. Let’s dig into why.</em></h1>
+            <p class="lead reveal" style="--d:.12s">
+              Hagonoy is a low-lying coastal town beside northern Manila Bay. Studies show that land in and around it is slowly <strong>subsiding</strong>, sinking by several centimeters every year, mostly because of heavy groundwater pumping. As the land drops, tides and rain reach farther and stay longer.
+            </p>
+            <p class="reveal" style="--d:.16s">Scroll down to journey through the layers of the earth, from the surface to bedrock, and learn what is happening, why it matters to our community, and what we can do.</p>
+            <div class="row reveal" style="--d:.2s">
+              <a class="btn btn-primary" href="#about">Start the descent ⬇</a>
+              <a class="btn btn-ghost" href="#explore" data-open-tab="report">Report an observation</a>
+            </div>
+            <div class="stats">
+              <div class="stat reveal" style="--d:.1s"><b>~10 cm/yr</b><span>sinking rate cited by Hagonoy’s municipal engineer</span></div>
+              <div class="stat reveal" style="--d:.16s"><b>124.5 mm/yr</b><span>peak measured near heavy-pumping zones, 2015–2021 Q1</span></div>
+              <div class="stat reveal" style="--d:.22s"><b>26</b><span>barangays in a low-lying coastal delta town</span></div>
+              <div class="stat reveal" style="--d:.28s"><b>2023</b><span>year the whole municipality was placed under a state of calamity</span></div>
+            </div>
+            <a class="scroll-hint reveal" href="#about" style="--d:.3s"><i aria-hidden="true">↓</i> Scroll to go deeper</a>
+          </div>
+
+          <div class="reveal" style="--d:.15s">
+            <div class="scene">
+              <svg viewBox="0 0 480 440" role="img" aria-label="Cross-section illustration: a well pumps water from the aquifer, the clay layer compacts, the ground sinks and a house gets surrounded by high-tide flood water.">
+                <defs>
+                  <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe5ea"/><stop offset="1" stop-color="#eef3dd"/></linearGradient>
+                </defs>
+                <rect width="480" height="440" fill="url(#skyG)"/>
+                <circle cx="418" cy="50" r="26" fill="#f6dc8e"/>
+                <g class="sc-cloud" fill="#fff" opacity=".85"><ellipse cx="86" cy="52" rx="34" ry="12"/><ellipse cx="112" cy="44" rx="24" ry="12"/><ellipse cx="150" cy="56" rx="28" ry="10"/></g>
+
+                <!-- soil layers -->
+                <path d="M0 170Q60 158 120 168T240 168T360 166T480 170V440H0Z" fill="#7b5e44"/>
+                <path d="M0 252Q120 240 240 254T480 249V440H0Z" fill="#5f4733"/>
+                <path d="M0 330Q120 321 240 333T480 327V440H0Z" fill="#4f7479"/>
+                <path d="M0 386H480V440H0Z" fill="#2b2519"/>
+                <path d="M0 170Q60 158 120 168T240 168T360 166T480 170" stroke="#8fae5f" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+                <!-- stones -->
+                <g fill="#a39a88"><ellipse cx="80" cy="232" rx="10" ry="7"/><ellipse cx="236" cy="226" rx="14" ry="9" fill="#8d8472"/><ellipse cx="440" cy="210" rx="10" ry="7"/><ellipse cx="172" cy="290" rx="12" ry="8" fill="#b3a998"/><ellipse cx="410" cy="284" rx="15" ry="10" fill="#8d8472"/><ellipse cx="300" cy="412" rx="16" ry="9" fill="#6e6656"/><ellipse cx="170" cy="414" rx="12" ry="8" fill="#6e6656"/></g>
+                <g fill="#9fc3c4" opacity=".5"><circle cx="150" cy="352" r="3"/><circle cx="220" cy="366" r="2.5"/><circle cx="290" cy="350" r="3"/><circle cx="360" cy="368" r="2.5"/><circle cx="430" cy="352" r="3"/><circle cx="70" cy="360" r="2.5"/></g>
+
+                <!-- labels -->
+                <g font-family="Nunito Sans, sans-serif" font-weight="800" font-size="14" fill="#f3ecda">
+                  <text x="14" y="214">Topsoil</text><text x="14" y="276">Clay &amp; silt</text><text x="14" y="352">Aquifer</text><text x="14" y="418">Bedrock</text>
+                </g>
+
+                <!-- well -->
+                <rect x="104" y="176" width="9" height="190" rx="3" fill="#ddd5c2"/>
+                <path d="M108.5 360V184" stroke="#6fb4d1" stroke-width="3" stroke-dasharray="5 6" class="sc-flow" fill="none"/>
+                <rect x="90" y="158" width="38" height="20" rx="5" fill="#3b2c20"/>
+                <path d="M128 164h18v8" stroke="#3b2c20" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <path d="M146 176q0 14-6 14" stroke="#6fb4d1" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+
+                <!-- mascot -->
+                <g transform="translate(168 100) scale(.8)"><g class="pebbo-bob"><use href="#pebbo" width="100" height="90"/></g></g>
+                <g class="sc-sprout"><path d="M236 170V150" stroke="#5f7a3b" stroke-width="3" stroke-linecap="round"/><path d="M236 154q-12-2-14-12 10 0 14 12zM236 150q12-2 14-12-10 0-14 12z" fill="#8fae5f"/></g>
+
+                <!-- house -->
+                <g class="sc-house">
+                  <rect x="310" y="118" width="80" height="52" fill="#f4e9d3"/>
+                  <polygon points="298,120 350,78 402,120" fill="#6a5745"/>
+                  <rect x="340" y="140" width="20" height="30" rx="3" fill="#8a6f56"/>
+                  <rect x="367" y="130" width="16" height="14" rx="2" fill="#cfe5ea"/>
+                  <rect x="317" y="130" width="16" height="14" rx="2" fill="#cfe5ea"/>
+                </g>
+
+                <!-- flood water -->
+                <g opacity=".62"><path class="sc-wave" d="M240 158q15-9 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0V180H240Z" fill="#6fb4d1"/></g>
+
+                <!-- sinking arrow + chips -->
+                <g font-family="Nunito Sans, sans-serif" font-weight="800" font-size="14">
+                  <rect x="292" y="196" width="116" height="26" rx="13" fill="#14130a" opacity=".55"/>
+                  <text x="350" y="214" text-anchor="middle" fill="#f3ecda">land sinks ↓</text>
+                  <rect x="138" y="314" width="94" height="24" rx="12" fill="#14130a" opacity=".55"/>
+                  <text x="185" y="331" text-anchor="middle" fill="#f3ecda">pumping ↑</text>
+                </g>
+              </svg>
+            </div>
+            <p class="scene-cap">Pumping lowers water pressure underground → clay layers compact → the land sinks → tides and rain flood farther inland.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="layer t-light" id="about" data-layer="Topsoil">
+      <span class="deco d1" aria-hidden="true"></span><span class="deco d2" aria-hidden="true"></span><span class="deco d3" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 1 · Topsoil</span>
+          <h2>About Land Subsidence</h2>
+          <p>Land subsidence is the gradual sinking of the ground surface. It is a <strong>“slow-onset disaster”</strong>: it creeps along year after year, so it is easy to ignore until roads, homes and rice fields are already underwater.</p>
+        </div>
+
+        <div class="split">
+          <div class="stack">
+            <div class="stone reveal">
+              <div class="icon" aria-hidden="true">🐌</div>
+              <h3>Slow, steady, hard to see</h3>
+              <p>A few centimeters a year does not look dramatic, but over ten years it adds up to a meter, which is enough to turn a dry street into a tidal channel.</p>
+            </div>
+            <div class="stone reveal" style="--d:.08s">
+              <div class="icon" aria-hidden="true">🌊</div>
+              <h3>Relative sea-level rise</h3>
+              <p>When land drops, the sea <em>appears</em> to rise even if the water itself has not. Researchers report that Manila Bay rose about one meter relative to the land between 1964 and 2002, an effect they linked to subsidence. <span class="src">Philippine Star, 2006</span></p>
+            </div>
+          </div>
+          <figure class="photo reveal" style="--d:.1s">
+            <div class="frame">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/05283jfHagonoy_Town_Proper_Bulacan_Landmarksfvf_24.jpg?width=900" alt="High-tide flood in the Santo Niño–San Sebastian area of Hagonoy town proper" loading="lazy" decoding="async">
+              <span class="ph"><span aria-hidden="true">🖼️</span>High-tide flooding in Hagonoy town proper (photo loads when online)</span>
+            </div>
+            <figcaption>High-tide flooding in Hagonoy’s town proper (Santo Niño–San Sebastian). Photo via <a href="https://commons.wikimedia.org/wiki/File:05283jfHagonoy_Town_Proper_Bulacan_Landmarksfvf_24.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC0.</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="reveal" style="margin-top:3.2rem">Why Hagonoy is on the front line</h3>
+        <div class="split top" style="margin-top:1rem">
+          <div class="stone reveal">
+            <ul>
+              <li><strong>Low and coastal.</strong> Hagonoy sits about 50 km north of Manila, beside northern Manila Bay and the Hagonoy River system. <span class="src">Mongabay, 2025</span></li>
+              <li><strong>Built by sediment.</strong> It lies on a delta plain where soft water-laid sediments pile up. These compact naturally and are naturally flood-prone, even before any pumping. <span class="src">Mongabay, 2025</span></li>
+              <li><strong>Heavy pumping.</strong> Hagonoy’s yearly groundwater extraction is estimated at about 9 million m³, possibly enough to account for ~81 mm/year of sinking. <span class="src">Maclang et al., 2026</span></li>
+              <li><strong>Sinking everywhere.</strong> Even areas far from pumping stations are subsiding, so it is a town-wide (and region-wide) problem, not just a local one. <span class="src">Maclang et al., 2026</span></li>
+            </ul>
+          </div>
+          <div class="stone reveal" style="--d:.08s">
+            <h3>Timeline of a sinking delta</h3>
+            <ol class="timeline">
+              <li><b>1991–2002</b><p>Parts of Pampanga, Bulacan and Camanava sink by as much as a meter in about 11 years. <span class="src">Philstar, 2006</span></p></li>
+              <li><b>2003 onward</b><p>Satellite monitoring shows Bulacan and Pampanga sinking 4–6 cm every year. <span class="src">AFP/Inquirer, 2019</span></p></li>
+              <li><b>2004</b><p>Groundwater extraction is banned in parts of Bulacan. <span class="src">AFP/Khaleej Times, 2025</span></p></li>
+              <li><b>2014–2020</b><p>InSAR analysis finds a maximum of 10.9 cm/year in Bulacan. <span class="src">Sulapas et al., 2024</span></p></li>
+              <li><b>July 2023</b><p>Hagonoy is placed under a state of calamity after days of floods. <span class="src">Manila Bulletin, 2023</span></p></li>
+              <li><b>Sept 2026</b><p>Floodwaters still submerge parts of the town, such as Barangay Iba, after weeks of monsoon rain. <span class="src">Daily Tribune, 2026</span></p></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="stone reveal" style="margin-top:1.5rem" id="rates">
+          <h3>How fast is it sinking?</h3>
+          <p class="note" style="margin-top:-.3em">Reported rates from different places, methods and periods. They are not directly comparable, but all point the same way: down.</p>
+          <div class="bars" style="margin-top:1.2rem">
+            <div class="bar-row"><div class="top"><span>Bulacan &amp; Pampanga, average since 2003 <span class="src">AFP/Inquirer</span></span><b>4–6 cm/yr</b></div><div class="track"><div class="fill" style="--w:.385"></div></div></div>
+            <div class="bar-row"><div class="top"><span>Hagonoy–Calumpit, mean within 500 m of pumping stations <span class="src">Maclang et al.</span></span><b>7.0 cm/yr</b></div><div class="track"><div class="fill" style="--w:.54"></div></div></div>
+            <div class="bar-row"><div class="top"><span>Hagonoy municipal engineer’s estimate <span class="src">GMA</span></span><b>~10 cm/yr</b></div><div class="track"><div class="fill" style="--w:.77"></div></div></div>
+            <div class="bar-row"><div class="top"><span>Fastest-sinking zone in Bulacan (Guiguinto–Bulakan–Balagtas) <span class="src">Sulapas et al.</span></span><b>10.9 cm/yr</b></div><div class="track"><div class="fill" style="--w:.84"></div></div></div>
+            <div class="bar-row"><div class="top"><span>Hagonoy–Calumpit peak near high-extraction zones <span class="src">Maclang et al.</span></span><b>12.45 cm/yr</b></div><div class="track"><div class="fill" style="--w:.96"></div></div></div>
+          </div>
+        </div>
+
+        <div class="pebbo-says reveal" style="margin-top:1.5rem">
+          <svg class="pebbo-bob" viewBox="0 0 100 90" aria-hidden="true"><use href="#pebbo" width="100" height="90"/></svg>
+          <p><strong>Pebbo says:</strong> Subsidence does not make it rain. It makes every flood <em>deeper and longer</em>, because the land has less height to spare. Heavy rain, high tides and silted waterways still matter too.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CAUSES ===================== -->
+    <section class="layer t-light" id="causes" data-layer="Subsoil">
+      <span class="deco d1" aria-hidden="true"></span><span class="deco d4" aria-hidden="true"></span><span class="deco d3" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 2 · Subsoil</span>
+          <h2>Causes</h2>
+          <p>Several forces push the land down together. In Hagonoy and neighboring towns, <strong>groundwater extraction</strong> stands out as the biggest human-made driver.</p>
+        </div>
+
+        <div class="split">
+          <div class="reveal">
+            <div class="icon" aria-hidden="true">💧</div>
+            <h3>Groundwater extraction</h3>
+            <p>Underground water in the aquifer holds up the soil grains around it. When wells pump water out faster than nature refills it, the pressure drops and the layers above, especially soft clay, squeeze together like a sponge. The ground surface follows.</p>
+            <div class="pair" style="margin:1.2rem 0">
+              <div class="stat"><b>~70 mm/yr</b><span>average sinking within 500 m of pumping stations</span></div>
+              <div class="stat"><b>~65 mm/yr</b><span>average farther away, so it is still sinking, just a little slower</span></div>
+            </div>
+            <p class="note">Hagonoy–Calumpit, 2015 – 2021 Q1 (−70.22 vs −65.31 mm/yr). Built-up volume and groundwater withdrawal together explained most of the sinking pattern (R² ≈ 0.85). <span class="src">Maclang et al., 2026</span></p>
+          </div>
+          <figure class="photo reveal" style="--d:.1s">
+            <div class="frame">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gwsanjoaquin.jpg?width=900" alt="A marked utility pole in California's San Joaquin Valley showing how far the land surface dropped because of groundwater pumping" loading="lazy" decoding="async">
+              <span class="ph"><span aria-hidden="true">🖼️</span>Marked pole showing land lowered by groundwater pumping (photo loads when online)</span>
+            </div>
+            <figcaption>Example from California: the marked pole shows how far the ground dropped after decades of groundwater pumping. Photo by USGS via <a href="https://commons.wikimedia.org/wiki/File:Gwsanjoaquin.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="reveal" style="margin-top:3rem">How pumping makes the land sink</h3>
+        <ol class="steps reveal" style="margin-top:1.6rem">
+          <li><b>Wells pump</b><p>Homes, farms, fishponds and industries draw water from deep wells.</p></li>
+          <li><b>Pressure drops</b><p>With less water between the grains, the aquifer can’t hold up the layers above.</p></li>
+          <li><b>Clay compacts</b><p>Soft clay and silt squeeze together. This is largely permanent.</p></li>
+          <li><b>Land sinks</b><p>The surface lowers, so the same tide or rain now reaches higher and lasts longer.</p></li>
+        </ol>
+
+        <h3 class="reveal" style="margin-top:3rem">Other things that add to it</h3>
+        <div class="cards" style="margin-top:1.2rem">
+          <div class="stone pebble reveal"><div class="icon" aria-hidden="true">🏗️</div><h4>Urban growth &amp; weight</h4><p>More buildings, roads and fishpond dikes mean more load on soft ground <em>and</em> more water demand.</p></div>
+          <div class="stone pebble reveal" style="--d:.06s"><div class="icon" aria-hidden="true">🪨</div><h4>Natural compaction</h4><p>Delta sediments slowly settle under their own weight. It is a natural background process that pumping speeds up.</p></div>
+          <div class="stone pebble reveal" style="--d:.12s"><div class="icon" aria-hidden="true">🏞️</div><h4>Sediment starvation</h4><p>Dikes and dredging keep river silt from spreading over the plain, so the land no longer rebuilds its lost height. <span class="src">Philstar, 2006</span></p></div>
+          <div class="stone pebble reveal" style="--d:.18s"><div class="icon" aria-hidden="true">🌡️</div><h4>Climate change</h4><p>Rising seas and stronger storms meet land that is already sinking. <span class="src">Sulapas et al., 2024</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EFFECTS ===================== -->
+    <section class="layer t-sand" id="effects" data-layer="Clay layer">
+      <span class="deco d1" aria-hidden="true"></span><span class="deco d2" aria-hidden="true"></span><span class="deco d3" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 3 · Clay</span>
+          <h2>Effects</h2>
+          <p>When the ground drops, the damage shows up where people live: flooded streets, cracked structures and salty water where there used to be dry land.</p>
+        </div>
+
+        <div class="cards wide">
+          <div class="stone reveal">
+            <div class="icon" aria-hidden="true">🌊</div>
+            <h3>Flooding</h3>
+            <p>Hagonoy floods from high tides, monsoon rain and river overflow, and subsidence makes each one worse by lowering the land they spill onto.</p>
+            <ul>
+              <li>In July 2023, <strong>12 villages</strong> waded in nearly 5 ft (4.86 ft) of tide-driven floodwater for about a week. <span class="src">Manila Bulletin</span></li>
+              <li>On <strong>July 30, 2023</strong>, the whole municipality was placed under a state of calamity (Resolution 2023-87). <span class="src">Manila Bulletin</span></li>
+              <li>Residents have faced high-tide floods for more than a decade. <span class="src">Manila Bulletin</span></li>
+            </ul>
+          </div>
+          <div class="stone reveal" style="--d:.08s">
+            <div class="icon" aria-hidden="true">🏠</div>
+            <h3>Infrastructure damage</h3>
+            <p>Roads, bridges, schools, chapels and homes sit lower every year. Fixes tend to be temporary because the ground keeps moving.</p>
+            <ul>
+              <li>Road-raising projects of about 1 meter may only buy years: at ~10 cm/yr, roughly a decade. <span class="src">Medium feature</span></li>
+              <li>Some families raise their homes or give up flooded ground floors; others leave. <span class="src">UP Resilience Institute</span></li>
+              <li>The municipal engineer said piecemeal flood projects had little effect and called for a master plan with neighboring towns. <span class="src">GMA</span></li>
+            </ul>
+          </div>
+          <div class="stone reveal" style="--d:.16s">
+            <div class="icon" aria-hidden="true">🧂</div>
+            <h3>Salty water &amp; land loss</h3>
+            <p>As the bay creeps inland, brackish water can spoil soil and groundwater, hurting farms, fishponds and drinking supplies.</p>
+            <ul>
+              <li>Scientists warn that one meter of subsidence can let tides reach 10–20 km farther inland on very gentle coastal plains. <span class="src">Philstar, 2006</span></li>
+              <li>At least 5,000 people have been displaced from coastal areas north of Manila as the bay advanced. <span class="src">AFP</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="split" style="margin-top:3rem">
+          <figure class="photo reveal">
+            <div class="frame">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/SubsidedRoad.jpg?width=900" alt="A road broken and tilted by ground movement at Mam Tor, England" loading="lazy" decoding="async">
+              <span class="ph"><span aria-hidden="true">🖼️</span>A road broken by ground movement (photo loads when online)</span>
+            </div>
+            <figcaption>Example from England (Mam Tor): when the ground moves, roads crack, tilt and break. Photo via <a href="https://commons.wikimedia.org/wiki/File:SubsidedRoad.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption>
+          </figure>
+
+          <div class="stone sim reveal" style="--d:.1s" id="sim">
+            <h3>🧪 How long does a raised road last?</h3>
+            <p class="note" style="margin-top:-.3em">A simple what-if. It assumes the ground sinks at a constant rate; real rates vary by place.</p>
+            <div class="presets" aria-label="Presets">
+              <button type="button" data-h="1" data-r="4">Slow (4 cm/yr)</button>
+              <button type="button" data-h="1" data-r="7">Pumping zone (7 cm/yr)</button>
+              <button type="button" data-h="1" data-r="10">Hagonoy engineer (10 cm/yr)</button>
+              <button type="button" data-h="1" data-r="12.5">Peak (12.5 cm/yr)</button>
+            </div>
+            <label for="simH">Road raised by <output id="simHo">1.0 m</output></label>
+            <input type="range" id="simH" min="0.3" max="2" step="0.1" value="1">
+            <label for="simR">Sinking rate <output id="simRo">10 cm/yr</output></label>
+            <input type="range" id="simR" min="1" max="13" step="0.5" value="10">
+            <div class="sim-out" aria-live="polite">
+              <div class="big" id="simYears">10 years</div>
+              <div class="track"><div class="fill" id="simBar" style="--w:.5"></div></div>
+              <div id="simText" class="note"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMMUNITY IMPACT ===================== -->
+    <section class="layer t-dark" id="community" data-layer="Water table">
+      <span class="deco d1" aria-hidden="true"></span><span class="deco d3" aria-hidden="true"></span><span class="deco d4" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 4 · Water table</span>
+          <h2>Community Impact</h2>
+          <p>Behind every number is a family, a classroom or a small business. Persistent floodwater in Hagonoy disrupts everyday life in many ways at once.</p>
+        </div>
+
+        <div class="cards">
+          <div class="stone pebble reveal"><div class="icon" aria-hidden="true">🐟</div><h4>Livelihoods</h4><p>Farming, fishponds, small stores and daily work get interrupted when streets and fields stay underwater.</p></div>
+          <div class="stone pebble reveal" style="--d:.05s"><div class="icon" aria-hidden="true">🎒</div><h4>Education</h4><p>Classes are disrupted and children wade (or ride) through floods to reach school.</p></div>
+          <div class="stone pebble reveal" style="--d:.1s"><div class="icon" aria-hidden="true">🛋️</div><h4>Homes &amp; belongings</h4><p>Floodwater destroys appliances, furniture and documents, and families repeat the cleanup.</p></div>
+          <div class="stone pebble reveal" style="--d:.15s"><div class="icon" aria-hidden="true">🩺</div><h4>Health</h4><p>Standing water raises the risk of sickness, especially for children and older adults.</p></div>
+          <div class="stone pebble reveal" style="--d:.2s"><div class="icon" aria-hidden="true">🚣</div><h4>Mobility</h4><p>Boats, raised tricycles and elevated walkways replace ordinary transport when roads go under.</p></div>
+          <div class="stone pebble reveal" style="--d:.25s"><div class="icon" aria-hidden="true">🛟</div><h4>Safety</h4><p>Deep, fast-rising water threatens safety, especially during typhoons and high tides.</p></div>
+        </div>
+        <p class="note reveal" style="margin-top:1rem">Impacts summarized from <span class="src">Mongabay, 2025</span> and <span class="src">Manila Bulletin, 2023–2025</span></p>
+
+        <div class="split" style="margin-top:3.2rem">
+          <figure class="photo reveal">
+            <div class="frame">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/FvfSanMiguelHagonoyHT0544_04.JPG?width=900" alt="Barangay San Miguel, Hagonoy, mostly inundated by high tides" loading="lazy" decoding="async">
+              <span class="ph"><span aria-hidden="true">🖼️</span>Barangay San Miguel inundated by high tides (photo loads when online)</span>
+            </div>
+            <figcaption>Barangay San Miguel, Hagonoy, mostly inundated by high tides. Photo via <a href="https://commons.wikimedia.org/wiki/File:FvfSanMiguelHagonoyHT0544_04.JPG" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption>
+          </figure>
+          <div class="reveal" style="--d:.08s">
+            <h3>Adapting, but not “used to it”</h3>
+            <p>Hagonoy residents have invented their own coping tools: boats as everyday transport, elevated tricycles that can cross floodwater, and raised house floors. Some households have moved to safer ground. <span class="src">Mongabay, 2025</span></p>
+            <p>Local youth leaders stress that flooding in Hagonoy is <strong>not normal</strong> and that resilience should not be an excuse to delay concrete help. <span class="src">Manila Bulletin, 2025</span></p>
+            <a class="btn btn-primary" href="#explore" data-open-tab="report">Share what you’ve seen</a>
+          </div>
+        </div>
+
+        <h3 class="reveal" style="margin-top:3.4rem">Myth or fact? <small style="font-weight:600;font-size:.55em;opacity:.75">(tap a card)</small></h3>
+        <div class="cards" style="margin-top:1.2rem">
+          <div class="flip reveal"><button type="button" aria-pressed="false"><span class="face front"><small>Myth</small><p>“Hagonoy only floods because it rains a lot.”</p><span class="tap">Tap to flip ↻</span></span><span class="face back"><small>Fact</small><p>Rain is only one trigger. High tides, silted waterways, poor drainage and a sinking land surface all combine. Subsidence makes every flood deeper and longer.</p></span></button></div>
+          <div class="flip reveal" style="--d:.08s"><button type="button" aria-pressed="false"><span class="face front"><small>Myth</small><p>“Land only sinks after earthquakes.”</p><span class="tap">Tap to flip ↻</span></span><span class="face back"><small>Fact</small><p>Earthquakes can cause sudden drops, but in the Bulacan–Pampanga delta the main driver is slow compaction from groundwater pumping, plus urban weight.</p></span></button></div>
+          <div class="flip reveal" style="--d:.16s"><button type="button" aria-pressed="false"><span class="face front"><small>Myth</small><p>“If we raise the roads, the problem is solved.”</p><span class="tap">Tap to flip ↻</span></span><span class="face back"><small>Fact</small><p>Raised roads help for a while, but if the ground keeps sinking about 10 cm a year, a 1 m fix may last only about a decade. The cause must be addressed too.</p></span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MITIGATION ===================== -->
+    <section class="layer t-dark" id="solutions" data-layer="Aquifer">
+      <span class="deco d1" aria-hidden="true"></span><span class="deco d2" aria-hidden="true"></span><span class="deco d3" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 5 · Aquifer</span>
+          <h2>Mitigation &amp; Solutions</h2>
+          <p>Geologist Mahar Lagmay has said subsidence could be reversible with effective policies governing the over-digging of wells. Nothing works alone. Community, government and sustainable practices have to work together.</p>
+        </div>
+
+        <div class="mit-cols">
+          <div class="stone reveal">
+            <h3><span class="icon" style="margin:0" aria-hidden="true">🤝</span> Community actions</h3>
+            <ul>
+              <li><b>Save water at home.</b> Fix leaks, reuse water, and collect rain for non-drinking uses to reduce demand on wells.</li>
+              <li><b>Report unregistered deep wells</b> to the barangay or LGU, since groundwater use generally needs a permit.</li>
+              <li><b>Keep waterways clear.</b> Join clean-ups of canals, creeks and drains; garbage worsens flooding.</li>
+              <li><b>Plan for floods.</b> Know evacuation routes, raise appliances and documents, and follow local advisories.</li>
+              <li><b>Document and report.</b> Photos and dates of flooding, cracks and sinking help local planners; use the report form on this site.</li>
+            </ul>
+          </div>
+          <div class="stone reveal" style="--d:.08s">
+            <h3><span class="icon" style="margin:0" aria-hidden="true">🏛️</span> Government initiatives</h3>
+            <ul>
+              <li><b>Groundwater limits.</b> Extraction has been banned in parts of Bulacan since 2004; the NWRB is tasked to enforce water-permit rules. <span class="src">AFP; Philstar</span></li>
+              <li><b>Monitoring.</b> NAMRIA provided 21 benchmarks in Hagonoy and Calumpit, and GNSS stations (including one in Sto. Niño, Hagonoy) track vertical movement. <span class="src">ISPRS, 2026</span></li>
+              <li><b>North Manila Bay Flood Protection Strategy.</b> A Netherlands-funded effort that, with the Provincial Government of Bulacan, is exploring nature-based solutions. <span class="src">PGB</span></li>
+              <li><b>Master planning.</b> Hagonoy’s engineer urges a flood-mitigation and water-management plan with Paombong, Malolos and Calumpit. <span class="src">GMA</span></li>
+              <li><b>Land-use planning.</b> Researchers recommend building subsidence risk into zoning and local plans. <span class="src">Maclang et al.</span></li>
+            </ul>
+          </div>
+          <div class="stone reveal" style="--d:.16s">
+            <h3><span class="icon" style="margin:0" aria-hidden="true">🌱</span> Sustainable practices</h3>
+            <ul>
+              <li><b>Alternative water sources.</b> Shift supply from deep wells to treated surface water or piped systems to ease aquifer pumping.</li>
+              <li><b>Nature-based defenses.</b> Restore mangroves and coastal vegetation to slow waves and trap sediment. <span class="src">Inquirer; PGB</span></li>
+              <li><b>Watershed care.</b> Reforestation and watershed conservation reduce runoff and silt problems. <span class="src">Inquirer, 2023</span></li>
+              <li><b>Let water in.</b> Use permeable surfaces, retention areas and clean drains rather than sealing every surface with concrete.</li>
+              <li><b>Measure and share.</b> Community and school-based monitoring keep the issue visible.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pebbo-says reveal" style="margin-top:2rem">
+          <svg class="pebbo-bob" viewBox="0 0 100 90" aria-hidden="true"><use href="#pebbo" width="100" height="90"/></svg>
+          <p><strong>Pebbo says:</strong> Solutions that only raise the ground (roads, floors) treat the symptom. The long-term fix is to <em>slow the sinking itself</em> by managing how much groundwater we take.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERACTIVE ===================== -->
+    <section class="layer t-dark" id="explore" data-layer="Deep aquifer">
+      <span class="deco d1" aria-hidden="true"></span><span class="deco d3" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 6 · Deep aquifer</span>
+          <h2>Explore &amp; Take Part</h2>
+          <p>Check which barangays have reported flooding, test what you’ve learned, read common questions, and send us your own observations.</p>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Interactive features">
+          <button class="tab" role="tab" id="tab-map" aria-controls="panel-map" aria-selected="true">🗺️ Map</button>
+          <button class="tab" role="tab" id="tab-quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1">🧠 Quiz</button>
+          <button class="tab" role="tab" id="tab-faq" aria-controls="panel-faq" aria-selected="false" tabindex="-1">❓ FAQ</button>
+          <button class="tab" role="tab" id="tab-report" aria-controls="panel-report" aria-selected="false" tabindex="-1">📝 Report</button>
+        </div>
+
+        <!-- MAP -->
+        <div class="panel" role="tabpanel" id="panel-map" aria-labelledby="tab-map">
+          <div class="map-grid">
+            <div>
+              <div class="map-frame"><iframe id="mapFrame" title="Google Map of Hagonoy, Bulacan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hagonoy,+Bulacan&amp;z=13&amp;output=embed"></iframe></div>
+              <p class="note" style="margin-top:.7rem"><a id="mapOpen" href="https://www.google.com/maps?q=Hagonoy,+Bulacan" target="_blank" rel="noopener" style="color:var(--accent)">Open in Google Maps ↗</a> · Needs an internet connection.</p>
+            </div>
+            <div class="stone info">
+              <h3>Flood-reported areas</h3>
+              <p class="note">Tap a barangay to jump the map to it. These are areas named in news reports of flooding, <strong>not</strong> an official hazard or subsidence map. For official maps, ask your MDRRMO.</p>
+              <div class="chips" id="mapChips"></div>
+              <div id="mapInfo" class="stone pebble" style="background:var(--chip);box-shadow:none" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="panel" role="tabpanel" id="panel-quiz" aria-labelledby="tab-quiz" hidden>
+          <div class="quiz stone" id="quiz"></div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="panel" role="tabpanel" id="panel-faq" aria-labelledby="tab-faq" hidden>
+          <div class="faq">
+            <details open><summary>Is land subsidence the same as sea-level rise?</summary><div class="ans"><p>No. Sea-level rise is the water getting higher; subsidence is the <em>land</em> getting lower. In Hagonoy both happen, and the combined effect is called relative sea-level rise. For a low coastal town, a sinking land surface can matter as much as the sea itself.</p></div></details>
+            <details><summary>Can subsidence be stopped or reversed?</summary><div class="ans"><p>It can be <strong>slowed</strong> by limiting groundwater pumping and managing land use. Geologist Mahar Lagmay has said it could be reversible with effective well-digging policies. In general, though, compacted clay does not fully spring back, so prevention matters most.</p></div></details>
+            <details><summary>Is rain the only reason Hagonoy floods?</summary><div class="ans"><p>No. Rain, typhoons and monsoon winds trigger floods, but high tides, river overflow, silted channels, drainage problems and sinking land all add up. Subsidence does not create rainfall; it makes floodwater deeper and slower to drain.</p></div></details>
+            <details><summary>Is it legal to drill my own deep well?</summary><div class="ans"><p>Under the Water Code of the Philippines (Presidential Decree No. 1067), groundwater use generally requires a permit from the National Water Resources Board (NWRB). If you suspect an unregistered deep well, tell your barangay or LGU.</p></div></details>
+            <details><summary>How do I know if my barangay is affected?</summary><div class="ans"><p>Ask your barangay officials or the Municipal Disaster Risk Reduction and Management Office (MDRRMO), and check official hazard maps from government agencies. The map tab here shows only areas named in news reports.</p></div></details>
+            <details><summary>What can a student or resident do right now?</summary><div class="ans"><p>Save water, keep drains clear, learn evacuation routes, report observations through the form here, and share what you learn with family and neighbors. Awareness is the first step toward pressure for better policy.</p></div></details>
+            <details><summary>Why does a community report form matter?</summary><div class="ans"><p>Satellite data shows how fast land moves, but only residents know where water enters homes first, where roads crack and which wells are running. Local observations can guide where officials look next.</p></div></details>
+          </div>
+        </div>
+
+        <!-- REPORT -->
+        <div class="panel" role="tabpanel" id="panel-report" aria-labelledby="tab-report" hidden>
+          <div class="split top">
+            <div class="reveal in">
+              <h3>Community Feedback &amp; Reporting</h3>
+              <p>Saw flooding, cracks, a sinking road or a suspicious deep well? Tell us. Reports are saved by this website’s server for the project team (this is a school project prototype, not an official government channel).</p>
+              <div class="pebbo-says">
+                <svg class="pebbo-bob" viewBox="0 0 100 90" aria-hidden="true"><use href="#pebbo" width="100" height="90"/></svg>
+                <p><strong>Tip:</strong> Mention the street or sitio, how deep the water was, and the date. Please don’t include private information about other people.</p>
+              </div>
+              <div id="gformBox" style="margin-top:1.2rem" hidden></div>
+            </div>
+            <div class="stone">
+              <form id="reportForm" novalidate>
+                <div class="form-grid">
+                  <div class="field"><label for="rName">Name <small>(optional)</small></label><input id="rName" name="name" type="text" maxlength="80" autocomplete="name" placeholder="Juan Dela Cruz"></div>
+                  <div class="field"><label for="rContact">Email or phone <small>(optional)</small></label><input id="rContact" name="contact" type="text" maxlength="120" autocomplete="email" placeholder="So we can follow up"></div>
+                  <div class="field"><label for="rBrgy">Barangay *</label>
+                    <select id="rBrgy" name="barangay" required><option value="">Choose barangay…</option></select>
+                    <span class="err">Please choose a barangay.</span></div>
+                  <div class="field"><label for="rType">What did you observe? *</label>
+                    <select id="rType" name="type" required>
+                      <option value="">Choose a type…</option>
+                      <option>Flooding</option><option>Cracks / damaged structures</option><option>Sinking ground or road</option><option>Unregulated deep well</option><option>Saltwater / brackish water</option><option>Other</option>
+                    </select><span class="err">Please choose a type.</span></div>
+                  <div class="field full"><label for="rDate">Date observed</label><input id="rDate" name="dateObserved" type="date"></div>
+                  <div class="field full"><label for="rDesc">Describe what you saw *</label>
+                    <textarea id="rDesc" name="description" maxlength="1200" required placeholder="Example: Water was knee-deep along the main road near the chapel for 3 days after the high tide…"></textarea>
+                    <div class="count"><span id="rCount">0</span> / 1200</div>
+                    <span class="err">Please write at least 10 characters.</span></div>
+                  <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                  <div class="field full"><label class="check"><input type="checkbox" id="rOk" required> <span>I understand this is a school project and my report may be used for learning and awareness purposes.</span></label><span class="err">Please tick the box to continue.</span></div>
+                  <div class="full"><button type="submit" class="btn btn-primary" id="rSubmit">Send report</button> <span id="rStatus" class="note" role="status" style="margin-left:.6rem"></span></div>
+                </div>
+              </form>
+              <div class="success" id="rDone" hidden>
+                <svg class="pebbo pebbo-bob" viewBox="0 0 100 90" aria-hidden="true"><use href="#pebbo" width="100" height="90"/></svg>
+                <h3>Thank you!</h3>
+                <p>Your report was received. Reference: <code id="rId">GW-XXXXXX</code></p>
+                <button type="button" class="btn btn-ghost" id="rAgain">Send another report</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REFERENCES ===================== -->
+    <section class="layer t-dark" id="references" data-layer="Bedrock" style="--bg:#14130a">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="layer-tag">Layer 7 · Bedrock</span>
+          <h2>References</h2>
+          <p>You’ve reached the bottom. Everything above is grounded in the sources below (APA 7th edition).</p>
+        </div>
+        <p class="ref-note reveal">Please re-check each source’s access details before submission. Entries marked “n.d.” had no publication date visible on the page.</p>
+
+        <ol class="refs reveal">
+          <li>Maclang, J. D. C., Narca, A. M. Y., Reyes, R. B., &amp; Mabaquiao, L. C. S. (2026). Correlation of land subsidence with groundwater extraction and urbanization in Hagonoy and Calumpit, Bulacan from 2015 to 2021-Q1. <i>ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, X-5/W4-2025</i>. <a href="https://doi.org/10.5194/isprs-annals-X-5-W4-2025-307-2026" target="_blank" rel="noopener">https://doi.org/10.5194/isprs-annals-X-5-W4-2025-307-2026</a></li>
+          <li>Sulapas, J. J. S., Ybañez, A. A. B., Marasigan, K. M. M., Grageda, J. M. B. M., &amp; Lagmay, A. M. F. A. (2024). Ground subsidence in major Philippine metropolitan cities from 2014 to 2020. <i>International Journal of Applied Earth Observation and Geoinformation</i>. <a href="https://doi.org/10.1016/j.jag.2024.104107" target="_blank" rel="noopener">https://doi.org/10.1016/j.jag.2024.104107</a></li>
+          <li>Measuring ground subsidence rate in Bulacan and Pampanga delta using geodetic techniques. (2026). <i>ISPRS Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLVIII-5/W4-2025</i>. <a href="https://isprs-archives.copernicus.org/articles/XLVIII-5-W4-2025/207/2026/" target="_blank" rel="noopener">https://isprs-archives.copernicus.org/articles/XLVIII-5-W4-2025/207/2026/</a></li>
+          <li>University of the Philippines Resilience Institute. (n.d.). <i>Understanding ground subsidence: A growing threat to Philippine communities</i>. <a href="https://resilience.up.edu.ph/understanding-ground-subsidence-a-growing-threat-to-philippine-communities/" target="_blank" rel="noopener">https://resilience.up.edu.ph/understanding-ground-subsidence-a-growing-threat-to-philippine-communities/</a></li>
+          <li>Provincial Government of Bulacan. (n.d.). <i>Nature-based solutions eyed to be the answer to flooding in Bulacan coastal areas</i>. <a href="https://bulacan.gov.ph/?p=12019" target="_blank" rel="noopener">https://bulacan.gov.ph/?p=12019</a></li>
+          <li>Presidential Decree No. 1067, A Decree Instituting a Water Code, Philippines (1976).</li>
+          <li><i>U.P. experts reinforce findings: Pampanga delta plain, Camanava sinking</i>. (2006, October 15). The Philippine Star. <a href="https://philstar.com/agriculture/2006/10/15/363094/up-experts-reinforce-findings-pampanga-delta-plain-camanava-sinking" target="_blank" rel="noopener">https://philstar.com/agriculture/2006/10/15/363094/up-experts-reinforce-findings-pampanga-delta-plain-camanava-sinking</a></li>
+          <li>Agence France-Presse. (2019). <i>Sinking PH areas: ‘Slow onset disaster’</i>. Philippine Daily Inquirer. <a href="https://newsinfo.inquirer.net/?p=1121449" target="_blank" rel="noopener">https://newsinfo.inquirer.net/?p=1121449</a></li>
+          <li>EDITORIAL – Digging for water. (2019, September 3). <i>The Philippine Star</i>. <a href="https://www.philstar.com/opinion/2019/09/03/1948572/opinion" target="_blank" rel="noopener">https://www.philstar.com/opinion/2019/09/03/1948572/opinion</a></li>
+          <li>Keeping Bulacan afloat [Editorial]. (2023, August 4). <i>Philippine Daily Inquirer</i>. <a href="https://opinion.inquirer.net/165313/keeping-bulacan-afloat" target="_blank" rel="noopener">https://opinion.inquirer.net/165313/keeping-bulacan-afloat</a></li>
+          <li><i>Flood inundates 12 Hagonoy, Bulacan villages</i>. (2023, July 4). Manila Bulletin. <a href="https://mb.com.ph/2023/07/04/high-tide-causes-deep-flood-in-12-hagonoy-bulacan-vilages" target="_blank" rel="noopener">https://mb.com.ph/2023/07/04/high-tide-causes-deep-flood-in-12-hagonoy-bulacan-vilages</a></li>
+          <li><i>Hagonoy, Bulacan placed under calamity state due to flooding</i>. (2023, July 31). Manila Bulletin. <a href="https://mb.com.ph/2023/7/31/hagonoy-bulacan-declared-a-state-of-calamity" target="_blank" rel="noopener">https://mb.com.ph/2023/7/31/hagonoy-bulacan-declared-a-state-of-calamity</a></li>
+          <li><i>‘Flooding in Hagonoy is not normal,’ says Bulacan youth leader urging gov’t action</i>. (2025, July 28). Manila Bulletin. <a href="https://mb.com.ph/2025/07/28/flooding-in-hagonoy-is-not-normal-says-bulacan-youth-leader-urging-govt-action" target="_blank" rel="noopener">https://mb.com.ph/2025/07/28/flooding-in-hagonoy-is-not-normal-says-bulacan-youth-leader-urging-govt-action</a></li>
+          <li><i>Hagonoy remains under water</i>. (2026, September 8). Daily Tribune. <a href="https://tribune.net.ph/2026/09/08/hagonoy-bulacan-submerge" target="_blank" rel="noopener">https://tribune.net.ph/2026/09/08/hagonoy-bulacan-submerge</a></li>
+          <li><i>Filipinos wade through floodwaters due to sinking land, rising sea &amp; corruption</i>. (2025, December). Mongabay. <a href="https://news.mongabay.com/2025/12/filipinos-wade-through-floodwaters-due-to-sinking-land-rising-sea-corruption/" target="_blank" rel="noopener">https://news.mongabay.com/2025/12/filipinos-wade-through-floodwaters-due-to-sinking-land-rising-sea-corruption/</a></li>
+          <li><i>Against the tide: Filipinos battle rising sea on sinking island</i>. (2025, September 17). Khaleej Times. <a href="https://www.khaleejtimes.com/world/asia/filipinos-battle-rising-sea-on-sinking-island" target="_blank" rel="noopener">https://www.khaleejtimes.com/world/asia/filipinos-battle-rising-sea-on-sinking-island</a></li>
+          <li><i>Issue ng Bayan: The ghosts of Bulacan</i>. (n.d.). GMA Public Affairs. <a href="https://www.gmanetwork.com/news//publicaffairs/content/963611/issue-ng-bayan-the-ghosts-of-bulacan/story/" target="_blank" rel="noopener">https://www.gmanetwork.com/news//publicaffairs/content/963611/issue-ng-bayan-the-ghosts-of-bulacan/story/</a></li>
+          <li><i>Hagonoy’s battle against flooding: Can road projects address the town’s rising tide crisis?</i> (n.d.). Medium. <a href="https://medium.com/@lenmenese27/hagonoys-battle-against-flooding-can-road-projects-address-the-towns-rising-tide-crisis-ec09f3b74809" target="_blank" rel="noopener">https://medium.com/@lenmenese27/hagonoys-battle-against-flooding-can-road-projects-address-the-towns-rising-tide-crisis-ec09f3b74809</a></li>
+        </ol>
+
+        <h3 class="reveal" style="margin-top:2.4rem">Image credits</h3>
+        <ol class="refs reveal">
+          <li>Hagonoy town proper high-tide flood photo (File:05283jfHagonoy Town Proper Bulacan Landmarksfvf 24.jpg). Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:05283jfHagonoy_Town_Proper_Bulacan_Landmarksfvf_24.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+          <li>Barangay San Miguel, Hagonoy (File:FvfSanMiguelHagonoyHT0544 04.JPG). Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:FvfSanMiguelHagonoyHT0544_04.JPG" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+          <li>San Joaquin Valley subsidence marker (File:Gwsanjoaquin.jpg). U.S. Geological Survey via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Gwsanjoaquin.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+          <li>Mam Tor road damaged by ground movement (File:SubsidedRoad.jpg). Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:SubsidedRoad.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Hagonoy GroundWatch</h4>
+          <p>A Web-Based Environmental Awareness Platform on Land Subsidence in Hagonoy, Bulacan.</p>
+          <a class="to-top" href="#home">↑ Back to the surface</a>
+        </div>
+        <div>
+          <h4>Group members</h4>
+          <ul data-members>
+            <li>Clarck Joseph S. Andres</li>
+            <li>John Kenneth B. De Jesus</li>
+            <li>Iam Jay Z. Aguinaldo</li>
+          </ul>
+        </div>
+        <div>
+          <h4>About this project</h4>
+          <p>BSIT 4A · Final Course Output in Environmental Science<br>Bulacan State University – Hagonoy Campus</p>
+        </div>
+      </div>
+      <p class="fine">Made for learning and community awareness. This is a student project and not an official government source; for hazard advisories, contact your local MDRRMO. Photos via Wikimedia Commons; see References for credits.</p>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
